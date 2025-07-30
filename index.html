@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RUPG Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header id="name"></header>
+    <div id="header">
+        <img id="userPicture" src="" alt="">
+        <h2 id="mainUser"></h2>
+    </div>
 
+    <p id="quote"></p>
 
+    <div id="pokemon">
+        <img id="poke-picture" src="" alt="">
+        <p id="poke-name"></p>
+    </div>
+    
+    <div id="about">About me
+        <p></p>
+    </div>
 
+    <ul id="friends"></ul>
+
+    <button class="generate"> Generate User </button>
     <script type="module" src="render.js"></script>
 </body>
 </html>
