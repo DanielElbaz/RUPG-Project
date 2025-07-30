@@ -1,5 +1,4 @@
-import { APIRequests } from "./model"
-const api = new APIRequests();
+
 
 export class Render {
     constructor() { }
@@ -15,6 +14,8 @@ export class Render {
     RenderFriends(friends) {
         const friendsID = document.getElementById('friends');
         friendsID.innerHTML = "";
+        const title=document.createElement('h3');
+        title.innerHTML="friends"
         friends.forEach(friend => {
             const li = document.createElement('li');
             li.textContent = `${friend.fname} ${friend.lname}`;
@@ -39,11 +40,11 @@ export class Render {
         bacon1.innerHTML=`${bacon}`
     }
 
-    RenderAll(user, friends, quote, pokemon, bacon) {
+    RenderAll(user, friends, pokemon,quote, bacon) {
         this.RenderMainUser(user)
         this.RenderFriends(friends)
-        this.RenderKanye(quote)
         this.RenderPoke(pokemon)
+        this.RenderKanye(quote)
         this.RenderBacon(bacon)
     }
 
