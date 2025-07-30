@@ -14,8 +14,12 @@ export class Render {
     RenderFriends(friends) {
         const friendsID = document.getElementById('friends');
         friendsID.innerHTML = "";
-        const title=document.createElement('h3');
-        title.innerHTML="friends"
+
+        const title=document.createElement('li');
+        title.textContent="Friends"
+        title.style.fontWeight="bold"
+        friendsID.appendChild(title);
+
         friends.forEach(friend => {
             const li = document.createElement('li');
             li.textContent = `${friend.fname} ${friend.lname}`;
