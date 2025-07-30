@@ -2,13 +2,14 @@ import { Render } from './render.js'
 import { APIRequests } from './model.js';
 
 
+const render = new Render();
+const api = new APIRequests();
 
 export class Main {
     constructor() { }
 
     async generateAll() {
-        const render = new Render();
-        const api = new APIRequests();
+
         const mainUser = await api.randomUser();
         const friends = await api.getFriends()
         const pokemon = await api.poke()
