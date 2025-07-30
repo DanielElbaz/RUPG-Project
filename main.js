@@ -10,13 +10,18 @@ export class Main {
 
     async generateAll() {
 
-        const mainUser = await api.randomUser();
-        const friends = await api.getFriends()
-        const pokemon = await api.poke()
-        const quote = await api.randomKanyeQuote()
-        const bacon = await api.baconIpsum()
-        render.RenderAll(mainUser, friends, pokemon, quote, bacon)
-        document.body.style.display = "block";
+        try {
+            const mainUser = await api.randomUser();
+            const friends = await api.getFriends()
+            const pokemon = await api.poke()
+            const quote = await api.randomKanyeQuote()
+            const bacon = await api.baconIpsum()
+            render.RenderAll(mainUser, friends, pokemon, quote, bacon)
+            document.body.style.display = "block";
+            render.RenderError("")
+        } catch (error) {
+            render.RenderError("An error occured")
+        }
     }
 
     generate() {
