@@ -75,12 +75,12 @@ export class APIRequests {
 
     }
 }
-const api = new APIRequests;
-api.randomUser().then(user => console.log(user));
-// api.getFriends().then(friends => console.log(friends));
-// api.randomKanyeQuote().then(quote => console.log(quote)).catch(err => console.error(err));
-// api.poke().then(pokemon => {
-//     console.log(`Nom : ${pokemon.name}`);
-//     console.log(`Image : ${pokemon.image}`);
-// });
-// api.baconIpsum().then(bacon => console.log(bacon))
+// const api = new APIRequests;
+// api.randomUser().then(user => console.log(user));
+// // api.getFriends().then(friends => console.log(friends));
+// // api.randomKanyeQuote().then(quote => console.log(quote)).catch(err => console.error(err));
+// // api.poke().then(pokemon => {
+// //     console.log(`Nom : ${pokemon.name}`);
+// //     console.log(`Image : ${pokemon.image}`);
+// // });
+// // api.baconIpsum().then(bacon => console.log(bacon))

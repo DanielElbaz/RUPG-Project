@@ -1,33 +1,45 @@
 import { APIRequests } from "./model"
-const api=new APIRequests();
+const api = new APIRequests();
 
 export class Render {
     constructor() { }
-    
-    RenderMainUser(user){
-      const picture= document.getElementById('userPicture');
-      picture.src=user.picture;
-      const mainUser=document.getElementById('mainUser');
-      mainUser.innerHTML=user.fname + user.lname
+
+    RenderMainUser(user) {
+        const picture = document.getElementById('userPicture');
+        picture.src = user.picture;
+
+        const mainUser = document.getElementById('mainUser');
+        mainUser.innerHTML = `${user.fname} ${user.lname} <br> ${user.city}, ${user.state}`
     }
 
-    RenderFriends(friends){
-
+    RenderFriends(friends) {
+        const friendsID = document.getElementById('friends');
+        friendsID.innerHTML = "";
+        friends.forEach(friend => {
+            const li = document.createElement('li');
+            li.textContent = `${friend.fname} ${friend.lname}`;
+            friendsID.appendChild(li);
+        });
     }
 
-    RenderKanye(quote){
-
-    }
-    
-    RenderPoke(pokemon){
-
+    RenderKanye(quote) {
+        const quote1=document.getElementById('quote');
+        quote1.innerHTML=`${quote}`
     }
 
-    RenderBacon(bacon){
-
+    RenderPoke(pokemon) {
+        const pokePicture=document.getElementById('poke-picture');
+        pokePicture.src=pokemon.image;
+        const pokeName=document.getElementById('poke-name');
+        pokeName.innerHTML=`${pokemon.name}`
     }
 
-    RenderAll(user,friends,quote,pokemon,bacon){
+    RenderBacon(bacon) {
+        const bacon1=document.getElementById("bacon");
+        bacon1.innerHTML=`${bacon}`
+    }
+
+    RenderAll(user, friends, quote, pokemon, bacon) {
         this.RenderMainUser(user)
         this.RenderFriends(friends)
         this.RenderKanye(quote)
