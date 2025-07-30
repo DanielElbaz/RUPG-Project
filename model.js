@@ -1,4 +1,4 @@
-class APIRequests {
+export class APIRequests {
     constructor() { }
 
     async randomUser() {
