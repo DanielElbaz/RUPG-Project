@@ -11,13 +11,18 @@ export class Main {
     async generateAll() {
 
         try {
-            const mainUser = await api.randomUser();
-            const friends = await api.getFriends()
-            const pokemon = await api.poke()
-            const quote = await api.randomKanyeQuote()
-            const bacon = await api.baconIpsum()
+            const [mainUser, friends, pokemon, quote, bacon] = await Promise.all([
+                api.randomUser(),
+                api.getFriends(),
+                api.poke(),
+                api.randomKanyeQuote(),
+                api.baconIpsum()
+            ]);
+
+
             render.RenderAll(mainUser, friends, pokemon, quote, bacon)
             document.body.style.display = "block";
+
             render.RenderError("")
         } catch (error) {
             render.RenderError("An error occured")

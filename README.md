@@ -52,4 +52,5 @@ git clone https://github.com/your-username/rupg-project.git
 
 ---
 
-This project was created for learning and practicing API integration with JavaScript.<img width="1905" height="827" alt="צילום מסך 2025-07-30 161055" src="https://github.com/user-attachments/assets/a10fb0f6-9289-43f5-9e95-b1c1c59d9882" />
+This project was created for learning and practicing API integration with JavaScript.
+<img width="1905" height="827" alt="צילום מסך 2025-07-30 161055" src="https://github.com/user-attachments/assets/a10fb0f6-9289-43f5-9e95-b1c1c59d9882" />
