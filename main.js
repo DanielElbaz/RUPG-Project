@@ -19,7 +19,6 @@ export class Main {
                 api.baconIpsum()
             ]);
 
-
             render.RenderAll(mainUser, friends, pokemon, quote, bacon)
             document.body.style.display = "block";
 

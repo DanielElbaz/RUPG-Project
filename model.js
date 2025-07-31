@@ -50,7 +50,7 @@ export class APIRequests {
 
     async poke() {
         try {
-            const randomId = Math.floor(Math.random() * 898) + 1;
+            const randomId = Math.floor(Math.random() * 1025) + 1;
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
             const data = await response.json();
             const pokemonName = data.name[0].toUpperCase() + data.name.slice(1); // for extension 
